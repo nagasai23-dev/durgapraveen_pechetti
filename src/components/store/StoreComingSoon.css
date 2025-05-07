@@ -1,0 +1,90 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+.store-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  transition: background 0.3s ease;
+}
+
+.store-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.store-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4cc9f0; /* Default blue color */
+}
+
+.store-message p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Dark Mode */
+.dark .store-section {
+  background: #1a1a2e;
+  color: #f8f8f8;
+}
+
+.dark .store-container {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Light Mode */
+.light .store-section {
+  background: #f5f7fa;
+  color: #333;
+}
+
+.light .store-container {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.light .store-container h2 {
+  color: #3a86ff; /* Different blue for light mode */
+}
+
+.typing {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  min-height: 100px;
+  margin: 2rem 0;
+  color: var(--text-primary, inherit);
+  line-height: 1.6;
+  position: relative;
+  white-space: wrap;
+}
+
+.store-message {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .store-container {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .typing {
+    animation: none;
+    width: auto;
+    border: none;
+  }
+}
