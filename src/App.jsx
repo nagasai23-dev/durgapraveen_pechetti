@@ -7,7 +7,7 @@ import About from './pages/About/About';
 import Work from './pages/Work/Work';
 import ContactPage from './pages/Contact/ContactPage';
 import  useDarkMode  from './hooks/useDarkMode';
-import StorePage from './Pages/StorePage/StorePage';
+import StorePage from './pages/StorePage/StorePage';
 import './assets/styles/global.css';
 
 function App() {
