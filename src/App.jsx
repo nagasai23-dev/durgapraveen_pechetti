@@ -1,13 +1,13 @@
 // import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header.jsx';
+import Footer from './components/Footer/Footer.jsx';
 import Home from './pages/Home/Home.jsx';
-import About from './pages/About/About';
-import Work from './pages/Work/Work';
-import ContactPage from './pages/Contact/ContactPage';
-import  useDarkMode  from './hooks/useDarkMode';
-import StorePage from './pages/StorePage/StorePage';
+import About from './pages/About/About.jsx';
+import Work from './pages/Work/Work.jsx';
+import ContactPage from './pages/Contact/ContactPage.jsx';
+import  useDarkMode  from './hooks/useDarkMode.jsx';
+import StorePage from './pages/StorePage/StorePage.jsx';
 import './assets/styles/global.css';
 
 function App() {
