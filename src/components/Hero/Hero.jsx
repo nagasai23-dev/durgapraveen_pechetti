@@ -12,27 +12,27 @@ const Hero = () => {
   const slides = [
     {
       id: 1,
-      image: "../../public/assets/images/slide-1.jpg",
+      image: "./assets/images/slide-1.jpg",
       alt: "Video editing showcase 1"
     },
     {
       id: 2,
-      image: "../../public/assets/images/slide-video.jpg",
+      image: "./assets/images/slide-video.jpg",
       alt: "Video editing showcase 2"
     },
     {
       id: 3,
-      image: "../../public/assets/images/slide-graphic.jpg",
+      image: "./assets/images/slide-graphic.jpg",
       alt: "Graphic design showcase"
     },
     {
       id: 4,
-      image: "../../public/assets/images/slide-thumbnail.jpg",
+      image: "./assets/images/slide-thumbnail.jpg",
       alt: "Thumbnail design showcase"
     },
     {
       id: 5,
-      image: "../../public/assets/images/slide-quote.jpg",
+      image: "./assets/images/slide-quote.jpg",
       alt: "Motivation quote showcase"
     }
   ];
