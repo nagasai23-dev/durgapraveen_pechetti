@@ -2,7 +2,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
-import Home from './pages/Home/Home.jsx';
+import Home from './Pages/Home/Home.jsx';
 import About from './pages/About/About.jsx';
 import Work from './pages/Work/Work.jsx';
 import ContactPage from './pages/Contact/ContactPage.jsx';
