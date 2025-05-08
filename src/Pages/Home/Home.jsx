@@ -1,10 +1,10 @@
-import Hero from '../../components/Hero/Hero';
-import Skills from '../../components/Skills/Skills';
-import Projects from '../../components/Projects/Projects';
-import Process from '../../components/Process/Process';
-import Tools from '../../components/Tools/Tools';
-import Store from '../../components/store/store';
-import Contact from '../../components/Contact/Contact';
+import Hero from '../../components/Hero/Hero.jsx';
+import Skills from '../../components/Skills/Skills.jsx';
+import Projects from '../../components/Projects/Projects.jsx';
+import Process from '../../components/Process/Process.jsx';
+import Tools from '../../components/Tools/Tools.jsx';
+import Store from '../../components/store/store.jsx';
+import Contact from '../../components/Contact/Contact.jsx';
 import './Home.css';
 
 const Home = () => {
