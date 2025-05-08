@@ -14,7 +14,7 @@ export const toolsData = [
     category: "Photo Editing",
     logo: "/assets/images/photoshop-logo.png",
     proficiency: "Advanced",
-    since: 2021,
+    since: 2022,
     description: "For thumbnail design and image manipulation"
   },
   {
