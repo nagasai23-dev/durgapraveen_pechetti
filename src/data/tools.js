@@ -21,7 +21,7 @@ export const toolsData = [
     id: 3,
     name: "DaVinci Resolve",
     category: "Color Grading",
-    logo: "../../public//assets/images/resolve-logo.png",
+    logo: "/assets/images/resolve-logo.png",
     proficiency: "Intermediate",
     since: 2024,
     description: "Color grading and correction"
