@@ -1,38 +1,52 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css/navigation';
+import { Pagination, Autoplay, Navigation } from 'swiper/modules';
+import { FaChevronLeft, FaChevronRight, FaPause, FaPlay } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
   const swiperRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const toggleAutoplay = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      if (isPlaying) {
+        swiperRef.current.swiper.autoplay.stop();
+      } else {
+        swiperRef.current.swiper.autoplay.start();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   const slides = [
     {
       id: 1,
-      image: "./assets/images/slide-1.jpg",
+      image: "/assets/images/slide-1.jpg", // updated path
       alt: "Video editing showcase 1"
     },
     {
       id: 2,
-      image: "./assets/images/slide-video.jpg",
+      image: "/assets/images/slide-video.jpg", // updated path
       alt: "Video editing showcase 2"
     },
     {
       id: 3,
-      image: "./assets/images/slide-graphic.jpg",
+      image: "/assets/images/slide-graphic.jpg", // updated path
       alt: "Graphic design showcase"
     },
     {
       id: 4,
-      image: "./assets/images/slide-thumbnail.jpg",
+      image: "/assets/images/slide-thumbnail.jpg", // updated path
       alt: "Thumbnail design showcase"
     },
     {
       id: 5,
-      image: "./assets/images/slide-quote.jpg",
+      image: "/assets/images/slide-quote.jpg", // updated path
       alt: "Motivation quote showcase"
     }
   ];
@@ -63,7 +77,7 @@ const Hero = () => {
           className="hero-buttons"
         >
           <a href="#work" className="btn-primary">View My Work</a>
-          <a href="#contact" className="btn-secondary">Get in Touch</a>
+          <a href="#contact" className="btn-secondary">Get in Touch</a> {/* ✅ Fixed comma issue */}
         </motion.div>
       </div>
       
@@ -77,8 +91,7 @@ const Hero = () => {
           <Swiper
             ref={swiperRef}
             spaceBetween={30}
-            slidesPerView={1} // Show only one slide at a time
-            centeredSlides={false} // Disable centered slides
+            slidesPerView={1}
             loop={true}
             autoplay={{
               delay: 3000,
@@ -88,7 +101,11 @@ const Hero = () => {
               clickable: true,
               dynamicBullets: true,
             }}
-            modules={[Pagination, Autoplay]}
+            navigation={{
+              nextEl: '.custom-next',
+              prevEl: '.custom-prev',
+            }}
+            modules={[Pagination, Autoplay, Navigation]}
             className="hero-swiper"
           >
             {slides.map((slide) => (
@@ -97,6 +114,7 @@ const Hero = () => {
                   <img 
                     src={slide.image} 
                     alt={slide.alt}
+                    loading="lazy" // 
                     className="swiper-slide-image"
                   />
                   <div className="swiper-overlay"></div>
@@ -104,10 +122,29 @@ const Hero = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+
+          {/* ✅ Carousel controls moved outside of Swiper */}
+          <div className="carousel-controls">
+            <button className="custom-prev" aria-label="Previous slide">
+              <FaChevronLeft />
+            </button>
+            
+            <button 
+              className="play-pause-btn"
+              onClick={toggleAutoplay}
+              aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
+            >
+              {isPlaying ? <FaPause /> : <FaPlay />}
+            </button>
+            
+            <button className="custom-next" aria-label="Next slide">
+              <FaChevronRight />
+            </button>
+          </div>
         </motion.div>
       </div>
     </section>
-  );
+  )
 };
 
 export default Hero;

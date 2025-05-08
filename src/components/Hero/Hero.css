@@ -1,3 +1,4 @@
+/* Hero.css */
 .hero {
   display: flex;
   min-height: 100vh;
@@ -12,14 +13,14 @@
 }
 
 .hero h1 {
-  font-size: 2.8rem; /* Decreased from 3.5rem */
+  font-size: 2.8rem;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   color: var(--text-primary);
 }
 
 .hero p {
-  font-size: 1.1rem; /* Slightly decreased from 1.2rem */
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 2rem;
   color: var(--text-secondary);
@@ -62,7 +63,7 @@
 .hero-media {
   flex: 1;
   position: relative;
-  max-width: 650px; /* Decreased from 800px */
+  max-width: 650px;
 }
 
 /* Swiper Container Styles */
@@ -70,7 +71,7 @@
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Slightly reduced shadow */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .hero-swiper {
@@ -87,24 +88,53 @@
 
 .swiper-overlay {
   display: none;
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%); */
 }
 
-/* Swiper Pagination Styles */
-.swiper-pagination {
+/* Carousel Controls */
+.carousel-controls {
   position: absolute;
-  bottom: 15px !important; /* Slightly raised pagination */
+  bottom:-10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+  padding: 8px 15px;
+  border-radius: 30px;
+}
+
+.custom-prev,
+.custom-next,
+.play-pause-btn {
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.custom-prev:hover,
+.custom-next:hover,
+.play-pause-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Pagination Positioning */
+.swiper-pagination {
+  bottom: 2px !important;
 }
 
 .swiper-pagination-bullet {
   background: white;
   opacity: 0.6;
-  width: 8px; /* Smaller bullets */
+  width: 8px;
   height: 8px;
   margin: 0 4px !important;
 }
@@ -114,10 +144,12 @@
   opacity: 1;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
     padding-top: 6rem;
+    gap: 2rem;
   }
   
   .hero-content {
@@ -131,14 +163,14 @@
   
   .hero-media {
     width: 100%;
-    max-width: 600px; /* Adjusted for tablet */
+    max-width: 600px;
     margin-top: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.2rem; /* Adjusted from 2.5rem */
+    font-size: 2.2rem;
   }
   
   .hero p {
@@ -149,12 +181,30 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   }
 
-  .hero-media {
-    max-width: 100%; /* Full width on mobile */
+  .carousel-controls {
+    padding: 6px 12px;
+    bottom: 8px;
+  }
+
+  .custom-prev,
+  .custom-next,
+  .play-pause-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+  }
+
+  .swiper-pagination {
+    bottom: 36px !important;
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 6rem 1.5rem 2rem;
+    min-height: auto;
+  }
+  
   .hero h1 {
     font-size: 2rem;
   }
@@ -163,12 +213,20 @@
     flex-direction: column;
     gap: 0.8rem;
   }
-}
 
-@media (max-width: 768px) {
-  .hero {
-    min-height: auto; /* Prevent mobile overflow */
-    padding-top: 6rem; /* You can keep this or adjust */
-    padding-bottom: 2rem; 
+  .carousel-controls {
+    padding: 5px 10px;
+    bottom: 5px;
+  }
+
+  .custom-prev,
+  .custom-next,
+  .play-pause-btn {
+    width: 22px;
+    height: 22px;
+  }
+
+  .swiper-pagination {
+    bottom: 32px !important;
   }
 }

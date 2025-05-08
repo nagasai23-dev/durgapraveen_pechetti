@@ -57,20 +57,27 @@ export const skillsData = [
   },
   {
     id: 9,
+    name: "Voiceover Editing",
+    icon: "🎙️",
+    level: 89,
+    description: "Enhancing, cleaning, and syncing voiceovers for clear narration"
+  },
+  {
+    id: 10,
     name: "Color Grading",
     icon: "🌈",
     level: 90,
     description: "Creating cinematic looks and consistent color schemes"
   },
   {
-    id: 10,
+    id: 11,
     name: "Color Correction",
     icon: "🎚️",
     level: 92,
     description: "Fixing exposure and white balance issues"
   },
   {
-    id: 11,
+    id: 12,
     name: "Canva",
     icon: "✏️",
     level: 85,

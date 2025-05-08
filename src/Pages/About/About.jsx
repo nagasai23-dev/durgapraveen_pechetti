@@ -56,7 +56,7 @@ const About = () => {
             </p>
           </div>
           <div className="story-image slide-in-right" ref={addToRefs}>
-            <img src="/assets/images/about-me.jpg" alt="Working on video editing" />
+            <img src="/assets/images/about-me.png" alt="Working on video editing" />
           </div>
         </div>
       </section>
