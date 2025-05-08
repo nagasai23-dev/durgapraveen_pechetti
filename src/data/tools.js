@@ -3,7 +3,7 @@ export const toolsData = [
     id: 1,
     name: "Adobe Premiere Pro",
     category: "Video Editing",
-    logo: "../../public/assets/images/premiere-logo.png",
+    logo: "/assets/images/premiere-logo.png",
     proficiency: "Expert",
     since: 2022,
     description: "My primary editing software for all video projects"
