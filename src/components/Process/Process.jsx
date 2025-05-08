@@ -1,4 +1,4 @@
-import { processSteps } from '../../data/process';
+import { processSteps } from '../../data/Process';
 import ProcessStep from './ProcessStep';
 import './Process.css';
 
