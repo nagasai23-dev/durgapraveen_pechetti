@@ -15,7 +15,7 @@ export const toolsData = [
     logo: "/assets/images/photoshop-logo.png",
     proficiency: "Advanced",
     since: 2022,
-    description: "For thumbnail design and image manipulation"
+    description: "For thumbnail and graphic design work"
   },
   {
     id: 3,
@@ -33,6 +33,6 @@ export const toolsData = [
     logo: "/assets/images/capcut-logo.png",
     proficiency: "Advanced",
     since: 2023,
-    description: "Used for editing reels, shorts, and quick social media videos with ease.-Based on the clint requirments"
+    description: "Used for editing reels, shorts, and quick social media videos with ease.(Based on the client requirements)"
   }
 ];

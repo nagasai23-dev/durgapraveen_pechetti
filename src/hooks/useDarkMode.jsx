@@ -2,16 +2,14 @@ import { useEffect, useState } from 'react';
 
 const useDarkMode = () => {
   const [darkMode, setDarkMode] = useState(() => {
-    // Check localStorage for saved preference
     const savedMode = localStorage.getItem('darkMode');
     if (savedMode !== null) return JSON.parse(savedMode);
-    
-    // Fallback to system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // ✅ Default to light mode
+    return false;
   });
 
   useEffect(() => {
-    // Apply class to document root
     if (darkMode) {
       document.documentElement.classList.add('dark');
       document.documentElement.classList.remove('light');
@@ -19,8 +17,7 @@ const useDarkMode = () => {
       document.documentElement.classList.add('light');
       document.documentElement.classList.remove('dark');
     }
-    
-    // Save preference to localStorage
+
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
   }, [darkMode]);
 

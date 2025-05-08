@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import ContactForm from './ContactForm';
 import './Contact.css';
 
@@ -38,29 +38,57 @@ const Contact = () => {
         <div className="contact-info" ref={infoRef}>
           <h2>Get In Touch</h2>
           <p>Ready to start your project or have questions? Reach out and let's create something amazing together.</p>
-          
+
           <div className="contact-details">
             <div className="detail-item">
               <h3>Email</h3>
               <a href="mailto:pdp0457@gmail.com">pdp0457@gmail.com</a>
             </div>
-            
+
             <div className="detail-item">
-              <h3>Phone</h3>
-              <a href="tel:+916302412225 ">+91 6302412225</a>
+              <h3>🟢 WhatsApp</h3>
+              <a
+                href="https://wa.me/916302412225"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contact via WhatsApp"
+              >
+                +91 6302412225
+              </a>
             </div>
-            
+
             <div className="detail-item">
               <h3>Social Media</h3>
               <div className="social-links">
-                <a href="#">Instagram</a>
-                <a href="https://www.youtube.com/@CinemaCelluloid" target="_blank" rel="noopener noreferrer">YouTube</a>
-                <a href="#">LinkedIn</a>
+                <a 
+                  href="https://www.instagram.com/yourprofile" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="Instagram profile"
+                >
+                  Instagram
+                </a>
+                <a 
+                  href="https://www.youtube.com/@CinemaCelluloid" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="YouTube channel"
+                >
+                  YouTube
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/yourprofile" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn profile"
+                >
+                  LinkedIn
+                </a>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div className="contact-form-wrapper" ref={formRef}>
           <h3>Send Me a Message</h3>
           <ContactForm />

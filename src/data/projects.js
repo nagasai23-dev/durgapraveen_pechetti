@@ -1,7 +1,7 @@
 export const projectsData = [
   {
     id: 2,
-    title: "Teaser Edit's",
+    title: "Teaser Edits",
     category: "videos",
     thumbnail: "/assets/images/wed-teaser.jpg",
     video: "/assets/videos/teaser.mp4",

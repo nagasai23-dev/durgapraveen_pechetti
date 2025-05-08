@@ -38,6 +38,7 @@
 
 .links-column ul {
   list-style: none;
+  cursor: pointer;
 }
 
 .links-column li {

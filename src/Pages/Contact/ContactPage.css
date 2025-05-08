@@ -3,6 +3,7 @@
   flex-direction: column;
   overflow-x: hidden;
   position: relative;
+  padding-top:3rem;
 }
 
 .contact-hero {

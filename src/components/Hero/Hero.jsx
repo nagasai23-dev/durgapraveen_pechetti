@@ -77,7 +77,7 @@ const Hero = () => {
           className="hero-buttons"
         >
           <a href="#work" className="btn-primary">View My Work</a>
-          <a href="#contact" className="btn-secondary">Get in Touch</a> {/* ✅ Fixed comma issue */}
+          <a href="#contact" className="btn-secondary">Send Me a Message</a> {/* ✅ Fixed comma issue */}
         </motion.div>
       </div>
       
