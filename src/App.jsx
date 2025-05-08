@@ -3,11 +3,11 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Home from './Pages/Home/Home.jsx';
-import About from './pages/About/About.jsx';
-import Work from './pages/Work/Work.jsx';
-import ContactPage from './pages/Contact/ContactPage.jsx';
+import About from './Pages/About/About.jsx';
+import Work from './Pages/Work/Work.jsx';
+import ContactPage from './Pages/Contact/ContactPage.jsx';
 import  useDarkMode  from './hooks/useDarkMode.jsx';
-import StorePage from './pages/StorePage/StorePage.jsx';
+import StorePage from './Pages/StorePage/StorePage.jsx';
 import './assets/styles/global.css';
 
 function App() {
