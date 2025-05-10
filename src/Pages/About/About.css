@@ -90,7 +90,7 @@
 /* Rest of your existing CSS */
 .about-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('/assets/images/about-bg.png');
+    url('/assets/images/about-bg.jpg');
   background-size: cover;
   background-position: center;
   min-height: 400px;

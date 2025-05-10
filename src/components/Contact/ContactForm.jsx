@@ -43,18 +43,18 @@ const ContactForm = () => {
         },
         (error) => {
           console.log('Error sending email:', error.text);
-          setError('Failed to send message. Please try again later or contact me directly at pdp0457@gmail.com');
+          setError('Failed to send message. Please try again later or contact me directly at durgapraveen.pechetti@gmail.com');
         }
       )
       .finally(() => {
         setIsLoading(false);
       });
   };
-  // console.log("EmailJS Env Vars:", {
-  //   service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  //   template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  //   user: import.meta.env.VITE_EMAILJS_USER_ID
-  // });
+  console.log("EmailJS Env Vars:", {
+    service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    user: import.meta.env.VITE_EMAILJS_USER_ID
+  });
   return (
     <form onSubmit={handleSubmit} className="contact-form" noValidate>
       {submitted && (
